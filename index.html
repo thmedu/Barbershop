@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Barber-Shop</title>
+</head>
+<body>
+
+    <header class="menu">
+        <div class="menu-container">
+            <a class="menu-logo" href="#"><img src="./img/" alt="logo"></a>
+
+            <nav id="my-menu-nav" class="menu-nav">
+                <ul>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">conceito</a></li>
+                    <li><a href="#">serviço</a></li>
+                    <li><a class="menu-agendamento-btn" href="#"><i class="fab fa-whatsapp"></i>Agendamento</a></li>
+                   
+                        <label for="switch" class="dark-mode-container">
+                            <input type="checkbox" id="switch">
+                        </label>
+                        
+                </ul>
+            </nav>
+            <span class="menu-open" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+
+    </header>
+
+    <main class="intro">
+        <div class="intro-container">
+            <h1>descubra um</h1>
+            <h1>novo <strong>estilo.</strong> </h1>
+        </div>
+ 
+    </main>
+
+    <section class="historia">
+        <div class="historia-container">
+            <h1>O Conceito</h1>
+            <div class="imagem-container">
+                <img src="./img/20861.jpg" alt="historia" class="imagem" data-original="./img/20861.jpg" data-hover="./img/20861-hover.jpg">
+            </div>
+            <p>Inspirada nas antigas barbearias nova-iorquinas típicas de filmes da máfia das décadas de 40, 50 e 60, a Barbearia chega com a intenção de resgatar a cultura masculina, perdida ao longo dos anos, em que os homens se encontravam para fazer a barba à navalha e cortar os cabelos enquanto fumavam seus charutos, bebiam e conversavam. <br><br> Entre toalhas quentes e massagem facial, os melhores cremes e espumas preparam o rosto dos nossos clientes. </p>
+            
+            <div class="compare">
+                <div class="imagem-container">
+                    <img src="./img/204.jpg" alt="Antes" class="imagem" data-original="./img/" data-hover="./img/depois.png">
+                </div>
+                <div class="imagem-container">
+                    <img src="./img/20861.jpg" alt="Depois" class="imagem" data-original="./img/depois.png" data-hover="./img/antes.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <section class="servico">
+        <div class="servico-container">
+            <h1>serviço</h1>
+            <p>Veja a nosso tabela de serviços e preços</p>
+
+            
+            <div class="tabela">
+                <div class="tabela1">
+                    <p><strong>BARBA</strong> ........................................R$25</p>
+                    <p><strong>CABELO</strong> .......................................R$35</p>
+                    <p><strong>BARBA + CABELO</strong> .......................R$55</p>
+                    <p><strong>HIDRATAÇÃO</strong> ..............................R$70</p>
+                    <p><strong>PINTURA</strong> ....................................R$80</p>
+                    <p><strong>LIMPEZA DE PELE</strong> ......................R$45</p>
+                </div>
+
+                <div class="tabela1">
+                    <p><strong>CORTE NA MAQUINA</strong> ..................R$25</p>
+                    <p><strong>SOMBRANCELHA</strong> ........................R$10</p>
+                    <p><strong>ALISAMENTO</strong> ..............................R$70</p>
+                    <p><strong>PROGRESSIVA</strong> .............................R$80</p>
+                    <p><strong>LUZES</strong> .........................................R$70</p>
+                    <p><strong>PEZINHO</strong> ....................................R$10</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="agendamento">
+        <div class="agendamento-container">
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8341881405004!2d-46.74399528521287!3d-23.646108470612067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce51cf43a682eb%3A0xa5d8c9e03718984a!2sVila%20Das%20Belezas!5e0!3m2!1spt-BR!2sbr!4v1606445554192!5m2!1spt-BR!2sbr" width="520" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            <div class="agendamento-item">
+                <h1>AGENDE AGORA PELO WHATSAPP</h1>
+                <p>Clique agora mesmo no botão abaixo, e agende seu horário.</p>
+
+                <a href="#"><i class="fab fa-whatsapp"></i> agende seu horário</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <img src="./img/204.jpg" alt="barber-shop">
+    
+            <div class="footer-item">
+                <h1>Endereço</h1>
+                <p>Rua logo ali 555, bairro SP</p>
+            </div>
+    
+            <div class="footer-item">
+                <h1>Sugestões</h1>
+                <a href="mailto:contato@contato.com">contato@contato.com</a>
+            </div>
+    
+            <div class="footer-social">
+                <h1>Redes sociais</h1>
+                <ul class="wrapper">
+                    <li class="icon facebook">
+                        <span class="tooltip">Facebook</span>
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook-f.png" alt="Facebook">
+                    </li>
+                    
+                    <li class="icon twitter">
+                        <span class="tooltip">Twitter</span>
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/twitter.png" alt="Twitter">
+                    </li>
+                    
+                    <li class="icon instagram">
+                        <span class="tooltip">Instagram</span>
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram">
+                    </li>
+                    
+                    <li class="icon github">
+                        <span class="tooltip">Github</span>
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/github.png" alt="Github">
+                    </li>
+                    
+                    <li class="icon youtube">
+                        <span class="tooltip">Youtube</span>
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="Youtube">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="criador">
+        <p>Desenvolvedor - <strong>Thomas Eduardo</strong> - 2020</p>
+    </div>
+    
+    <!-- formatação js -->
+    <script src="formatacao.js"></script>
+    
+    <script src="formatacao.js"></script>
+</body>
+</html>
