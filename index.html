@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,160 +8,226 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Barber-Shop</title>
+    <title>Barbearia</title>
 </head>
+
 <body>
 
-    <header class="menu">
-        <div class="menu-container">
-            <a class="menu-logo" href="#"><img src="./img/" alt="logo"></a>
+    <header class="header">
+        <section>
+            <a class="logo" href="#"><img src="img/logo.png" alt="logo" width="110"></a>
+            <!---AQUI VAI A LOGO-->
 
-            <nav id="my-menu-nav" class="menu-nav">
-                <ul>
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">conceito</a></li>
-                    <li><a href="#">serviço</a></li>
-                    <li><a class="menu-agendamento-btn" href="#"><i class="fab fa-whatsapp"></i>Agendamento</a></li>
-                   
-                        <label for="switch" class="dark-mode-container">
-                            <input type="checkbox" id="switch">
-                        </label>
-                        
-                </ul>
+            <nav class="navbar"><!---AQUI VAI O MENU DE NAVEGAÇÃO -->
+                <a href="#">Home</a>
+                <a href="#about">About</a> <!-- Adicione "#" antes de "about" -->
+                <a href="#menu">Menu</a> <!-- Adicione "#" antes de "menu" -->
+                <a href="review">Review</a>
+                <a href="address">Address</a>
             </nav>
-            <span class="menu-open" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        </div>
 
+
+            <div class="icons">
+                <img src="https://img.icons8.com/windows/30/ffffff/appointment-scheduling.png"
+                    alt="appointment-scheduling" />
+                <img src="https://img.icons8.com/material-outlined/30/ffffff/whatsapp--v1.png" alt="whatsapp--v1" />
+            </div>
+        </section>
     </header>
 
-    <main class="intro">
-        <div class="intro-container">
-            <h1>descubra um</h1>
-            <h1>novo <strong>estilo.</strong> </h1>
-        </div>
- 
-    </main>
+    <div class="home-container">
+        <section id="home">
+            <div class="content">
+                <h3>Estilo e tradição, cada corte uma história.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nulla, laborum in officiis nobis
+                    deserunt laudantium sapiente blanditiis id. Maiores illo blanditiis nostrum repudiandae quae eum
+                    eos. Cumque, animi minus?</p>
+                <a href="#" class="btn">Veja nossos Horarios</a>
 
-    <section class="historia">
-        <div class="historia-container">
-            <h1>O Conceito</h1>
-            <div class="imagem-container">
-                <img src="./img/20861.jpg" alt="historia" class="imagem" data-original="./img/20861.jpg" data-hover="./img/20861-hover.jpg">
-            </div>
-            <p>Inspirada nas antigas barbearias nova-iorquinas típicas de filmes da máfia das décadas de 40, 50 e 60, a Barbearia chega com a intenção de resgatar a cultura masculina, perdida ao longo dos anos, em que os homens se encontravam para fazer a barba à navalha e cortar os cabelos enquanto fumavam seus charutos, bebiam e conversavam. <br><br> Entre toalhas quentes e massagem facial, os melhores cremes e espumas preparam o rosto dos nossos clientes. </p>
-            
-            <div class="compare">
-                <div class="imagem-container">
-                    <img src="./img/204.jpg" alt="Antes" class="imagem" data-original="./img/" data-hover="./img/depois.png">
-                </div>
-                <div class="imagem-container">
-                    <img src="./img/20861.jpg" alt="Depois" class="imagem" data-original="./img/depois.png" data-hover="./img/antes.png">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    
-    
-
-    <section class="servico">
-        <div class="servico-container">
-            <h1>serviço</h1>
-            <p>Veja a nosso tabela de serviços e preços</p>
-
-            
-            <div class="tabela">
-                <div class="tabela1">
-                    <p><strong>BARBA</strong> ........................................R$25</p>
-                    <p><strong>CABELO</strong> .......................................R$35</p>
-                    <p><strong>BARBA + CABELO</strong> .......................R$55</p>
-                    <p><strong>HIDRATAÇÃO</strong> ..............................R$70</p>
-                    <p><strong>PINTURA</strong> ....................................R$80</p>
-                    <p><strong>LIMPEZA DE PELE</strong> ......................R$45</p>
-                </div>
-
-                <div class="tabela1">
-                    <p><strong>CORTE NA MAQUINA</strong> ..................R$25</p>
-                    <p><strong>SOMBRANCELHA</strong> ........................R$10</p>
-                    <p><strong>ALISAMENTO</strong> ..............................R$70</p>
-                    <p><strong>PROGRESSIVA</strong> .............................R$80</p>
-                    <p><strong>LUZES</strong> .........................................R$70</p>
-                    <p><strong>PEZINHO</strong> ....................................R$10</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="agendamento">
-        <div class="agendamento-container">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8341881405004!2d-46.74399528521287!3d-23.646108470612067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce51cf43a682eb%3A0xa5d8c9e03718984a!2sVila%20Das%20Belezas!5e0!3m2!1spt-BR!2sbr!4v1606445554192!5m2!1spt-BR!2sbr" width="520" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-            <div class="agendamento-item">
-                <h1>AGENDE AGORA PELO WHATSAPP</h1>
-                <p>Clique agora mesmo no botão abaixo, e agende seu horário.</p>
-
-                <a href="#"><i class="fab fa-whatsapp"></i> agende seu horário</a>
             </div>
 
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <img src="./img/204.jpg" alt="barber-shop">
-    
-            <div class="footer-item">
-                <h1>Endereço</h1>
-                <p>Rua logo ali 555, bairro SP</p>
-            </div>
-    
-            <div class="footer-item">
-                <h1>Sugestões</h1>
-                <a href="mailto:contato@contato.com">contato@contato.com</a>
-            </div>
-    
-            <div class="footer-social">
-                <h1>Redes sociais</h1>
-                <ul class="wrapper">
-                    <li class="icon facebook">
-                        <span class="tooltip">Facebook</span>
-                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/facebook-f.png" alt="Facebook">
-                    </li>
-                    
-                    <li class="icon twitter">
-                        <span class="tooltip">Twitter</span>
-                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/twitter.png" alt="Twitter">
-                    </li>
-                    
-                    <li class="icon instagram">
-                        <span class="tooltip">Instagram</span>
-                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/instagram-new.png" alt="Instagram">
-                    </li>
-                    
-                    <li class="icon github">
-                        <span class="tooltip">Github</span>
-                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/github.png" alt="Github">
-                    </li>
-                    
-                    <li class="icon youtube">
-                        <span class="tooltip">Youtube</span>
-                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="Youtube">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    
-    <div class="criador">
-        <p>Desenvolvedor - <strong>Thomas Eduardo</strong> - 2020</p>
     </div>
-    
-    <!-- formatação js -->
-    <script src="formatacao.js"></script>
-    
-    <script src="formatacao.js"></script>
+
+    <!-- Aqui removi a div desnecessária -->
+
+    <div> <!-- Sessão Sobre Nós -->
+        <section class="about" id="about">
+            <h2 class="title">Sobre <span>Nós </span></h2>
+            <!-- Sessão do título do container -->
+            <div class="row">
+                <div class="container-img">
+                    <img src="./img/Barbeiro-perfil.jpg" width="600" alt="sobre-nos">
+                    <!-- Sessão imagem xícara -->
+                </div>
+
+                <!-- Sessão Sobre Nós -->
+                <div class="content">
+                    <!-- Sessão content igual a content acima -->
+                    <h3> O Coração da Nossa Barbearia</h3>
+
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Rem, consequatur. Quasi quis
+                        repudiandae, voluptates neque facere, ea esse
+                        facilis, recusandae eos repellendus laborum est
+                        voluptas laboriosam perspiciatis eligendi ipsum
+                        molestias.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Rem, consequatur. Quasi quis
+                        repudiandae, voluptates neque facere, ea esse
+                        facilis, recusandae eos repellendus laborum est
+                        voluptas laboriosam perspiciatis eligendi ipsum
+                        molestias.</p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div> <!-- Fim da sessão Sobre Nós -->
+            </div>
+        </section>
+        <section class="menu" id="menu">
+            <h3 class="title">Tipos de Cortes</h3>
+        
+            <div class="box-container tabela">
+                <div class="card">
+                    <div class="card-header">
+                        <img width="50" height="50" src="https://img.icons8.com/glyph-neue/64/ffffff/scissors.png"
+                            alt="scissors" />
+                        <strong>TESOURA</strong>
+                    </div>
+                    <div class="card-body">
+                        <p>R$25</p>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-header">
+                        <img width="50" height="50" src="https://img.icons8.com/ios/50/ffffff/straight-razor.png"
+                            alt="straight-razor" />
+                        <strong>NAVALHA</strong>
+                    </div>
+                    <div class="card-body">
+                        <p>R$35</p>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-header">
+                        <img width="50" height="50"
+                            src="https://img.icons8.com/ios-filled/50/ffffff/handlebar-mustache.png"
+                            alt="handlebar-mustache" />
+                        <strong>MAQUINA</strong>
+                    </div>
+                    <div class="card-body">
+                        <p>R$55</p>
+                    </div>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </section>
+        
+
+
+    <section class="review" id="review">
+        <h2 class="title">Nossos <span>Clientes </span></h2>
+        <div class="box-container">
+
+
+            <div class="box">
+                <img width="50" height="50" src="https://img.icons8.com/quill/50/ffffff/quote-left.png"
+                    alt="quote-left" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Natus quam laboriosam fuga enim
+                    obcaecati, quas quidem vero, quae non ipsum
+                    asperiores eaque odit quaerat, eum blanditiis.
+                    Impedit, odio excepturi! Nobis!</p>
+                <img src="./img/client1.jpg" alt="cliente1" class="user">
+
+                <h3>Julio Chaves</h3>
+                <div class="stars">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                </div>
+            </div>
+
+            <div class="box">
+                <img width="50" height="50" src="https://img.icons8.com/quill/50/ffffff/quote-left.png"
+                    alt="quote-left" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Natus quam laboriosam fuga enim
+                    obcaecati, quas quidem vero, quae non ipsum
+                    asperiores eaque odit quaerat, eum blanditiis.
+                    Impedit, odio excepturi! Nobis!</p>
+                <img src="./img/client2.jpg" alt="cliente2" class="user">
+                <h3>Bruno Reis</h3>
+                <div class="stars">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                </div>
+            </div>
+
+            <div class="box">
+                <img width="50" height="50" src="https://img.icons8.com/quill/50/ffffff/quote-left.png"
+                    alt="quote-left" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Natus quam laboriosam fuga enim
+                    obcaecati, quas quidem vero, quae non ipsum
+                    asperiores eaque odit quaerat, eum blanditiis.
+                    Impedit, odio excepturi! Nobis!</p>
+                <img src="./img/client3.jpg" alt="cliente3" class="user">
+                <h3>Lucas Mathues</h3>
+                <div class="stars">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                    <img src="https://img.icons8.com/material-outlined/96/ffffff/star--v2.png" alt="star--v2"
+                        style="width: 30px; height: 30px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão de endereço -->
+    <section class="address" id="address">
+        <h2 class="title">Nosso <span>Endereço </span></h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58519.9711140389!2d-46.75502065136721!3d-23.550544299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5757726ddc09%3A0x39ec20e62e868b26!2sThe%20Coffee!5e0!3m2!1spt-BR!2sbr!4v1712088182816!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Rodapé -->
+    <section class="footer">
+        <div class="share">
+            <img width="30" height="30" src="https://img.icons8.com/ios/30/ffffff/instagram-new--v1.png"
+                alt="instagram-new--v1" />
+            <img width="30" height="30" src="https://img.icons8.com/ios/30/ffffff/facebook-new.png"
+                alt="facebook-new" />
+            <img width="30" height="30" src="https://img.icons8.com/ios/30/ffffff/twitterx--v2.png"
+                alt="twitterx--v2" />
+        </div>
+    </section>
+    </div>
+
 </body>
+
 </html>
