@@ -24,24 +24,71 @@
 body {
     background-color: var(--bg);
 }
+
+       /* Estilos para o menu de navegação */
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+        }
 
-/* Padronizando nossas seções */
-section {
-    padding: 3rem 2rem;
-    margin: 0 auto; /* Centralizando na página */
-    max-width: 1200px;
-}
-/* Estilos para telas maiores que 768px */
-@media screen and (min-width: 768px) {
-    .box-container {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    }
+        .menu a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-    .content {
-        max-width: 60rem;
-    }
-}
+        /* Estilos para telas menores (como smartphones) */
+        @media only screen and (max-width: 600px) {
+            .menu a {
+                display: none;
+            }
+            .menu a.icon {
+                float: right;
+                display: block;
+            }
+            .menu.responsive {
+                position: relative;
+            }
+            .menu.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .menu.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
 
+        /* Estilos para imagens responsivas */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Layout flexível usando Flexbox */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Estilos específicos para o conteúdo */
+        .content {
+            flex: 1 1 60%; /* Ajuste a largura do conteúdo principal conforme necessário */
+            padding: 20px;
+        }
+
+        /* Estilos para a barra lateral */
+        .sidebar {
+            flex: 1 1 30%; /* Ajuste a largura da barra lateral conforme necessário */
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
 /* Estilizando o cabeçalho */
 .header {
     position: fixed; /* Mantendo o menu fixo */
