@@ -327,6 +327,7 @@ img {
     display: block;
     margin: 0 auto 3rem;
     color: #ffffff;
+    border-radius: 50%; /* Adicionando a propriedade border-radius para tornar a imagem redonda */
 }
 
 .review .box-container .box .user {
