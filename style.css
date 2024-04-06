@@ -17,78 +17,13 @@
     text-decoration: none; 
     text-transform: capitalize; /* Deixando todas as iniciais maiúsculas */
     transition: 0.2s linear; /* Animação para cada transição */
-
 }
 
 /* Padronizando o corpo */
 body {
     background-color: var(--bg);
 }
-
-       /* Estilos para o menu de navegação */
-        .menu {
-            background-color: #333;
-            overflow: hidden;
-        }
 
-        .menu a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        /* Estilos para telas menores (como smartphones) */
-        @media only screen and (max-width: 600px) {
-            .menu a {
-                display: none;
-            }
-            .menu a.icon {
-                float: right;
-                display: block;
-            }
-            .menu.responsive {
-                position: relative;
-            }
-            .menu.responsive a.icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            .menu.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-        }
-
-        /* Estilos para imagens responsivas */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Layout flexível usando Flexbox */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        /* Estilos específicos para o conteúdo */
-        .content {
-            flex: 1 1 60%; /* Ajuste a largura do conteúdo principal conforme necessário */
-            padding: 20px;
-        }
-
-        /* Estilos para a barra lateral */
-        .sidebar {
-            flex: 1 1 30%; /* Ajuste a largura da barra lateral conforme necessário */
-            padding: 20px;
-            background-color: #f1f1f1;
-        }
 /* Estilizando o cabeçalho */
 .header {
     position: fixed; /* Mantendo o menu fixo */
@@ -124,17 +59,79 @@ body {
     font-size: 2rem;
 }
 
-/* Estilizando o efeito dos ícones do menu */
-.icons img {
-    margin: 1rem;
-    cursor: pointer;
-    color: #ffffff;
+/* Layout flexível usando Flexbox */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.icons img:hover {
-    width: 40px;
-    height: 40px;
+/* Estilizando o conteúdo */
+.content {
+    flex: 1 1 60%;
+    padding: 20px;
 }
+
+/* Estilizando a barra lateral */
+.sidebar {
+    flex: 1 1 30%;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Estilos para telas menores */
+@media only screen and (max-width: 600px) {
+    .menu a {
+        display: none;
+    }
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+    .menu.responsive {
+        position: relative;
+    }
+    .menu.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Estilos para imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos específicos para o conteúdo */
+.content {
+    max-width: 30.8rem;
+    text-transform: capitalize;
+    align-items: center;
+}
+
+/* Estilos para o texto */
+.content h3 {
+    color: #ffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+
+.content p {
+    color: #ffff;
+    font-size: 1rem;
+    font-weight: 40;
+    padding: 1rem 0;
+}
+
+/* Estilizando botões */
 .btn {
     background: var(--main-color);
     color: #070707;
@@ -143,83 +140,106 @@ body {
     cursor: pointer;
     margin: 1rem;
     display: inline-block;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 /* Estilizando o container 1 */
 .home-container {
     background: url("./img/img-home.jpg");
-    background-position: center; /* Estilizando o efeito do fundo */
-    background-size: cover; /* Estilizando o efeito para pegar toda a página */
+    background-position: center;
+    background-size: cover;
     margin: 1rem;
     cursor: pointer;
     height: 100vh;
 }
 
-/* Parte do texto que vai aparecer no container e botão*/
+/* Parte do texto dentro do container */
 .home-container section {
     display: flex;
     align-items: center;
-    min-height: 100vh; /*Ocupando a tela toada*/
+    min-height: 100vh;
 }
 
-/* Estilizando o efeito dos textos */
+/* Estilizando os textos */
 .content {
     max-width: 30.8rem;
-    text-transform:capitalize; 
+    text-transform: capitalize;
     align-items: center;
 }
 
-/* Estilizando o texto h3 */
-.content h3 {
-    color: #ffff;
-    font-size: 2rem;
-    text-transform: uppercase; 
-    margin-right: 2rem;
-   
-}
-/* Estilizando o texto p */
-.content p {
-    color: #ffff;
-    font-size: 1rem;
-    font-weight: 40;
-    padding: 1rem 0 ;   
-}
-/* Estilizando o efeito do botão do primeiro container */
-.btn-container {
-    background: var(--bg);
-    color: #fffefe;
-    padding: 1rem 3rem;
-    font-size: 1.7rem;
-    cursor: pointer;
-    margin: 1rem;
+/* Estilos adicionais para o preço 35 */
+.price-35 {
     display: inline-block;
-    
-    
+    margin-left: auto;
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
+/* Estilizando os cards */
+.card {
+    flex: 1 0 1 50%;
+    max-width: calc(200% - 20rem);
+    border: 1px solid var(--black);
+    border-radius: 1px;
+    padding: 2rem;
+    text-align: center;
+    margin: 0.4rem;
+    color: #ffffff;
+}
 
-/*sessão Sobre Nos*/
+.card img {
+    display: block;
+    margin: 0 auto 1rem;
+    width: 50px;
+    height: 50px;
+}
+
+.card-header strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.card-header h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.card-body p {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    color: var(--black);
+}
+
+.card:hover {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+/* Estilos para a seção 'Sobre Nós' */
 .title {
     font-size: 4rem;
     color: var(--main-color);
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 5rem;    
+    margin-bottom: 5rem;
 }
-.title span{
+
+.title span {
     font-size: 4rem;
-    text-align: center;
     color: var(--main-color);
-    text-transform:uppercase;
+    text-transform: uppercase;
     margin-bottom: 4rem;
     text-align: center;
 }
+
 .about .row {
     display: flex;
     align-items: center;
     background-color: var(--black);
-    gap:4.5rem
+    gap: 4.5rem;
 }
 
 .about .row .content {
@@ -230,62 +250,11 @@ body {
 .about .row .content h3 {
     color: #ffff;
     font-size: 2.4rem;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     margin-right: 5rem;
 }
 
-.box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-    padding: 3rem; /* Espaçamento interno */
-}
-
-.menu .box-container .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: var(--border);
-    padding: 5rem;
-    cursor: pointer;
-    gap: 1.4rem;
-    background-color: var(--bg); /* Cor de fundo dos cards */
-    border-radius: 10px; /* Arredondamento dos cantos */
-}
-
-.menu .box-container .box img {
-    height: 11rem;
-}
-
-.menu .box-container .box h3 {
-    color: #ffffff; /* Cor do texto do título */
-    font-size: 10rem;
-    padding: 1rem 0;
-}
-
-.menu .box-container .box .price {
-    color: #ffffff; /* Cor do texto do preço */
-    font-size: 15rem;
-    padding: 0.5rem 0;
-}
-
-.menu .box-container .box .price span {
-    font-size: 3.5rem;
-    text-decoration: line-through;
-    font-weight: lighter;
-    color: #ffffff;
-}
-
-.menu .box-container .box:hover {
-    background-color: var(--main-color);
-}
-
-.menu .box-container .box:hover > * {
-    color: #ffffff;
-}
-
+/* Estilizando a tabela */
 .tabela {
     display: flex;
     justify-content: center;
@@ -293,119 +262,71 @@ body {
     flex-wrap: wrap;
     color: #ffffff;
 }
+
 .card-tabela {
-    padding: 5rem; /* Espaçamento interno do card */
+    padding: 5rem;
     align-items: center;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .card-tabela table {
-    width: 100%; /* Tornar a tabela ocupar toda a largura do card */
-    color: rgb(255, 255, 255); /* Cor do texto */
-    font-family: Arial, sans-serif; /* Usar a fonte Arial ou uma fonte sans-serif */
-    text-transform: uppercase; 
-}
-
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    
+/* Estilizando a tabela (continuação) */
 .card-tabela table th,
 .card-tabela table td {
-    padding: 3rem; /* Espaçamento interno das células */
-    border-bottom: 0px solid rgb(255, 255, 255); /* Linhas de divisão */
-    text-align: left; /* Alinhamento do texto à esquerda */
-    font-weight: bold; /* Texto em negrito */
-    text-transform: uppercase; 
+    padding: 3rem;
+    border-bottom: 0px solid rgb(255, 255, 255);
+    text-align: left;
+    font-weight: bold;
 }
 
 .card-tabela table th {
-    font-weight: bold; /* Texto em negrito */
-    text-transform: uppercase; 
+    font-weight: bold;
 }
 
 .card-tabela table tr:last-child td {
-    border-bottom: none; /* Remover linha de divisão na última linha */
+    border-bottom: none;
 }
 
-/* Estilos adicionais para o preço 35 */
-.price-35 {
-    display: inline-block;
-    margin-left: auto;
-    color: red; /* Cor do preço 35 */
-    font-weight: bold; /* Texto em negrito */
-    text-transform: uppercase; 
-}
-
-.card {
-    flex: 1 0 1 50%;
-    max-width: calc(200% - 20rem);
-    border: 1px solid var(--black);
-    border-radius: 1px;
-    padding: 2rem;
-    text-align: center;
-    margin: 0.4rem;
-    color: #ffffff; 
-}
-.card img {
-    display: block;
-    margin: 0 auto 1rem;
-    width: 50px; /* Tamanho das imagens */
-    height: 50px;
-}
-
-.card-header strong {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #ffffff; /* Cor do texto */
-}
-
-.card-header h3{
-    font-size: 3rem;
-    text-transform: uppercase; 
-}
-.card-body p {
-    font-size: 1.3rem;
-    margin-bottom: 0;
-    color: var(--black); /* Cor do texto */
-}
-
-.card:hover {
-    background-color: var(--main-color); /* Cor de fundo ao passar o mouse */
-    color: var(--white); /* Cor do texto ao passar o mouse */
-}
-
+/* Estilos para os cards da seção 'Review' */
 .review .box-container .box {
     border: var(--border);
     text-align: center;
     padding: 1rem 0rem;
     display: inline-block;
-    color: #ffffff; 
+    color: #ffffff;
 }
-.box{
+
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
+
 .review .box-container .box p {
     font-size: 1rem;
-    color: #ffffff; 
+    color: #ffffff;
     padding: 1rem 0;
     line-height: 1;
     font-weight: lighter;
 }
 
 .review .box-container .box h3 {
-    color: #ffffff; /* Corrigido: 'ffff' para 'ffffff' */
+    color: #ffffff;
     font-size: 1rem;
     margin: 1rem;
 }
 
-.user .review .box img{
+.user .review .box img {
     width: 40px;
     height: 40px;
     display: block;
-    margin:0 auto 3rem;
+    margin: 0 auto 3rem;
     color: #ffffff;
-    
 }
 
 .review .box-container .box .user {
@@ -414,15 +335,9 @@ body {
     border-radius: 8rem;
     border-bottom: 1rem;
     border: 2rem;
-    
-}
-.address {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
 }
 
+/* Estilos para o rodapé */
 .footer .share {
     display: flex;
     align-items: center;
