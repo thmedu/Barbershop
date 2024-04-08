@@ -22,6 +22,8 @@ O projeto consiste em um site para uma barbearia, apresentando informações sob
 - JavaScript (opcional para funcionalidades interativas)
 - Bootstrap (opcional para design responsivo)
 - Google Maps API (para o mapa de localização)
+
+- 
 ![alt text](image-1.png)
  ![alt text](image.png)
 
