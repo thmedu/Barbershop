@@ -22,8 +22,8 @@ O projeto consiste em um site para uma barbearia, apresentando informações sob
 - JavaScript (opcional para funcionalidades interativas)
 - Bootstrap (opcional para design responsivo)
 - Google Maps API (para o mapa de localização)
-
- ![image](https://github.com/thmedu/project-barbearia/assets/141462806/5a532205-049e-4426-8e93-0824ff965041)
+![alt text](image-1.png)
+ ![alt text](image.png)
 
 
 ## Como Utilizar
