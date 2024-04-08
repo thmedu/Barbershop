@@ -134,14 +134,35 @@ img {
 /* Estilizando botões */
 .btn {
     background: var(--main-color);
-    color: #070707;
+    color: #000000;
     padding: 1rem 3rem;
     font-size: 1.0rem;
     cursor: pointer;
     margin: 1rem;
     display: inline-block;
     text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
 }
+.btn-container {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: #000000; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+.btn .btn-container:hover {
+    background-color: #6c4730; /* Cor de fundo ao passar o mouse */
+}
+
 
 /* Estilizando o container 1 */
 .home-container {
@@ -151,6 +172,7 @@ img {
     margin: 1rem;
     cursor: pointer;
     height: 100vh;
+    
 }
 
 /* Parte do texto dentro do container */
@@ -190,9 +212,10 @@ img {
 
 .card img {
     display: block;
-    margin: 0 auto 1rem;
+    margin: 0 auto 3rem;
     width: 50px;
     height: 50px;
+    border-left: 1rem;
 }
 
 .card-header strong {
@@ -225,7 +248,12 @@ img {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 5rem;
-}
+    margin-top: 10rem;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adicionando uma sombra para efeito de profundidade */
+    perspective: 1000px; /* Adicionando perspectiva para o efeito 3D */
+    animation: rotateTitle 2s ease-in-out infinite alternate; /* Adicionando animação de rotação */}
+
 
 .title span {
     font-size: 4rem;
@@ -233,7 +261,9 @@ img {
     text-transform: uppercase;
     margin-bottom: 4rem;
     text-align: center;
+    animation: zoomSubtitle 2s ease-in-out infinite alternate; /* Adicionando animação de zoom */
 }
+
 
 .about .row {
     display: flex;
@@ -248,10 +278,12 @@ img {
 }
 
 .about .row .content h3 {
+    
     color: #ffff;
-    font-size: 2.4rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    margin-right: 5rem;
+    margin-right: 1rem;
+
 }
 
 /* Estilizando a tabela */
@@ -261,24 +293,33 @@ img {
     align-items: center;
     flex-wrap: wrap;
     color: #ffffff;
+    margin: 0 auto; /* Adicionando margem auto para centralizar horizontalmente */
 }
 
 .card-tabela {
-    padding: 5rem;
+    padding: 1rem;
     align-items: center;
     text-transform: uppercase;
+    width: 100%;
+    max-width: 800px; /* Definindo uma largura máxima para a tabela */
 }
 
 .card-tabela table {
-    width: 100%;
+    width: 100%; /* Definindo a largura da tabela como 100% para ocupar todo o espaço disponível */
     color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
-    
+    align-items: center;
+}
+
 /* Estilizando a tabela (continuação) */
+.card-tabela table {
+    border-collapse: collapse;
+}
+
 .card-tabela table th,
 .card-tabela table td {
-    padding: 3rem;
-    border-bottom: 0px solid rgb(255, 255, 255);
+    padding: 1.5rem;
+    border-bottom: 3px solid var(--main-color);
     text-align: left;
     font-weight: bold;
 }
@@ -291,51 +332,154 @@ img {
     border-bottom: none;
 }
 
+.card-tabela table tr:hover {
+    background-color: rgba(140, 94, 50, 0.2);
+}
+
 /* Estilos para os cards da seção 'Review' */
+.review .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
 .review .box-container .box {
     border: var(--border);
     text-align: center;
-    padding: 1rem 0rem;
-    display: inline-block;
+    padding: 2rem;
     color: #ffffff;
-}
-
-.box {
+    flex: 1 1 300px; /* Tornando os boxes flexíveis e com largura máxima de 300px */
+    max-width: 300px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .review .box-container .box p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #ffffff;
-    padding: 1rem 0;
-    line-height: 1;
-    font-weight: lighter;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 .review .box-container .box h3 {
     color: #ffffff;
-    font-size: 1rem;
-    margin: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .user .review .box img {
-    width: 40px;
-    height: 40px;
-    display: block;
-    margin: 0 auto 3rem;
-    color: #ffffff;
-    border-radius: 50%; /* Adicionando a propriedade border-radius para tornar a imagem redonda */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
 .review .box-container .box .user {
-    height: 7rem;
-    width: 7rem;
-    border-radius: 8rem;
-    border-bottom: 1rem;
-    border: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.review .box-container .box .user span {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.
+.address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alterado para centralizar verticalmente */
+    margin-top: 5rem;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.address-container {
+
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+.map {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+.booking-form {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 45%; /* Definindo a largura para 45% */
+    margin-left: auto; /* Centralizando horizontalmente */
+    margin-right: auto; /* Centralizando horizontalmente */
+    margin-top: 5rem;
+}
+
+
+.booking-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form input[type="time"],
+.booking-form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.booking-form button {
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #4CAF50;
 }
 
 /* Estilos para o rodapé */
@@ -347,7 +491,6 @@ img {
 }
 
 .footer .share img {
-    margin: 0.3rem;
     cursor: pointer;
     border-radius: 50%;
     padding: 1rem;
